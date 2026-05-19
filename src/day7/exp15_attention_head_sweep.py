@@ -276,7 +276,11 @@ def main() -> None:
     print(f"Model loaded in {time.time()-t0:.1f}s  |  layers={num_layers}  hidden={hidden_dim}")
 
     # ── verify NUM_HEADS against actual model config ──────────────────────────
-    actual_heads = model.config.num_attention_heads
+    cfg = model.config
+    actual_heads = (
+        cfg.num_attention_heads if hasattr(cfg, "num_attention_heads")
+        else cfg.text_config.num_attention_heads
+    )
     if actual_heads != NUM_HEADS:
         print(f"  WARNING: expected {NUM_HEADS} heads, got {actual_heads} — updating.")
     n_heads = actual_heads
