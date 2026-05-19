@@ -31,7 +31,11 @@ def load_model(model_name=MODEL_NAME):
     else:
         layers_ref = model.model.layers
     num_layers = len(layers_ref)
-    hidden_dim = model.config.hidden_size
+    cfg = model.config
+    hidden_dim = (
+        cfg.hidden_size if hasattr(cfg, "hidden_size")
+        else cfg.text_config.hidden_size
+    )
     return processor, model, layers_ref, num_layers, hidden_dim
 
 
