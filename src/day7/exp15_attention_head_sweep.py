@@ -93,6 +93,10 @@ def parse_args() -> argparse.Namespace:
                    help="Which spatial relation to use for candidate images and the "
                         "fixed yes/no question. 'above' (default) uses vflip transform; "
                         "'left'/'right'/'below' use original transform images.")
+    p.add_argument("--skip-heads",    action="store_true", default=False,
+                   help="Skip the attention head ablation sweep entirely. Use with "
+                        "--ablate-mlp when only MLP results are needed, to avoid "
+                        "the ~3.5hr head sweep on a 7-layer window.")
     p.add_argument("--seed",          type=int, default=42)
     p.add_argument("--out-dir",       type=Path, default=Path("src/day7"))
     return p.parse_args()
@@ -326,56 +330,63 @@ def main() -> None:
             print(f"  → MLP not dominant (max flip_rate={max_mlp_fr:.3f} ≤ 0.10): circuit likely distributed across attention heads")
     # ── head ablation sweep ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     total_combos = len(layers_to_sweep) * n_heads
-    print(f"\n[Phase 2] Ablation sweep — {len(layers_to_sweep)} layers × {n_heads} heads = {total_combos} combos")
-    print(f"  Layers: {layers_to_sweep}")
-    print(f"  Images per combo: {len(correct_images)}")
-    print()
-
-    # results[layer_idx][head_idx] = flip_rate (fraction of images that flipped)
     results: dict[int, dict[int, float]] = {}
 
-    combo_done = 0
-    for layer_idx in layers_to_sweep:
-        results[layer_idx] = {}
-        for head_idx in range(n_heads):
-            flips = 0
-            for image, row in correct_images:
-                ablated = ablate_head(
-                    model, processor, layers_ref,
-                    image, fixed_q,
-                    layer_idx=layer_idx, head_idx=head_idx,
-                )
-                if ablated != "yes":   # baseline was "yes"; any change = flip
-                    flips += 1
-            flip_rate = flips / max(len(correct_images), 1)
-            results[layer_idx][head_idx] = flip_rate
-            combo_done += 1
-            if combo_done % 12 == 0 or combo_done == total_combos:
-                print(f"  [{combo_done}/{total_combos}] layer={layer_idx} head={head_idx} "
-                      f"flip_rate={flip_rate:.3f}")
-
-    # ── print summary table ───────────────────────────────────────────────────
-    print(f"\n{'Layer':>6}  {'Head':>5}  {'Flip rate':>10}  Bar")
-    print("-" * 50)
-    for layer_idx in layers_to_sweep:
-        for head_idx in range(n_heads):
-            fr = results[layer_idx][head_idx]
-            bar = "█" * int(fr * 30)
-            print(f"{layer_idx:>6}  {head_idx:>5}  {fr:>10.4f}  {bar}")
+    if args.skip_heads:
+        print(f"\n[Phase 2] Head sweep skipped (--skip-heads). Saving MLP-only results.")
+    else:
+        print(f"\n[Phase 2] Ablation sweep — {len(layers_to_sweep)} layers × {n_heads} heads = {total_combos} combos")
+        print(f"  Layers: {layers_to_sweep}")
+        print(f"  Images per combo: {len(correct_images)}")
         print()
 
-    # Find top causal heads across the sweep window
-    all_scores = [
-        (layer_idx, head_idx, results[layer_idx][head_idx])
-        for layer_idx in layers_to_sweep
-        for head_idx in range(n_heads)
-    ]
-    all_scores.sort(key=lambda x: x[2], reverse=True)
-    print(f"\nTop 5 causal heads (by flip rate):")
-    for layer_idx, head_idx, fr in all_scores[:5]:
-        print(f"  Layer {layer_idx:2d}  Head {head_idx:2d}  flip_rate={fr:.4f}")
+        # results[layer_idx][head_idx] = flip_rate (fraction of images that flipped)
+        combo_done = 0
+        for layer_idx in layers_to_sweep:
+            results[layer_idx] = {}
+            for head_idx in range(n_heads):
+                flips = 0
+                for image, row in correct_images:
+                    ablated = ablate_head(
+                        model, processor, layers_ref,
+                        image, fixed_q,
+                        layer_idx=layer_idx, head_idx=head_idx,
+                    )
+                    if ablated != "yes":   # baseline was "yes"; any change = flip
+                        flips += 1
+                flip_rate = flips / max(len(correct_images), 1)
+                results[layer_idx][head_idx] = flip_rate
+                combo_done += 1
+                if combo_done % 12 == 0 or combo_done == total_combos:
+                    print(f"  [{combo_done}/{total_combos}] layer={layer_idx} head={head_idx} "
+                          f"flip_rate={flip_rate:.3f}")
+
+        # ── print summary table ───────────────────────────────────────────────
+        print(f"\n{'Layer':>6}  {'Head':>5}  {'Flip rate':>10}  Bar")
+        print("-" * 50)
+        for layer_idx in layers_to_sweep:
+            for head_idx in range(n_heads):
+                fr = results[layer_idx][head_idx]
+                bar = "█" * int(fr * 30)
+                print(f"{layer_idx:>6}  {head_idx:>5}  {fr:>10.4f}  {bar}")
+            print()
+
+        # Find top causal heads across the sweep window
+        all_scores = [
+            (layer_idx, head_idx, results[layer_idx][head_idx])
+            for layer_idx in layers_to_sweep
+            for head_idx in range(n_heads)
+        ]
+        all_scores.sort(key=lambda x: x[2], reverse=True)
+        print(f"\nTop 5 causal heads (by flip rate):")
+        for layer_idx, head_idx, fr in all_scores[:5]:
+            print(f"  Layer {layer_idx:2d}  Head {head_idx:2d}  flip_rate={fr:.4f}")
 
     # ── save ──────────────────────────────────────────────────────────────────
+    top5 = sorted(
+        [(li, hi, results[li][hi]) for li in results for hi in results[li]],
+        key=lambda x: x[2], reverse=True
+    )[:5]
     out = {
         "experiment": "exp15_attention_head_sweep",
         "timestamp": datetime.now().isoformat(),
@@ -390,11 +401,10 @@ def main() -> None:
         "fixed_question": fixed_q,
         "flip_rates": {
             str(layer_idx): {str(h): results[layer_idx][h] for h in range(n_heads)}
-            for layer_idx in layers_to_sweep
+            for layer_idx in results
         },
         "top5_causal_heads": [
-            {"layer": l, "head": h, "flip_rate": fr}
-            for l, h, fr in all_scores[:5]
+            {"layer": l, "head": h, "flip_rate": fr} for l, h, fr in top5
         ],
         "mlp_flip_rates": {str(k): v for k, v in mlp_flip_rates.items()},
     }
