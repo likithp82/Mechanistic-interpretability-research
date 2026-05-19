@@ -286,8 +286,12 @@ def main() -> None:
     n_heads = actual_heads
 
     # ── collect model-correct images (baseline pass) ──────────────────────────
+    # Use per-image category-name questions so the model knows which object is
+    # which ("Is the person left of the kite?" rather than the ambiguous
+    # "Is object A left of object B?").
     print(f"\n[Phase 1] Baseline pass — finding images where model answers 'yes' correctly")
-    correct_images: list[tuple[Image.Image, dict]] = []
+    print(f"  Using per-image category-name questions (subject/object from manifest).")
+    correct_images: list[tuple[Image.Image, dict, str]] = []  # (image, row, question)
 
     for row in candidates:
         if len(correct_images) >= args.max_images:
@@ -296,11 +300,14 @@ def main() -> None:
         if img_path is None:
             continue
         image = Image.open(img_path).convert("RGB")
-        ans = get_yes_no(model, processor, image, fixed_q)
+        subj_cat = row.get("subject", {}).get("category", "object A")
+        obj_cat  = row.get("object",  {}).get("category", "object B")
+        img_q = f"Is the {subj_cat} {rel}{_prep} the {obj_cat}?"
+        ans = get_yes_no(model, processor, image, img_q)
         if ans == "yes":
-            correct_images.append((image, row))
+            correct_images.append((image, row, img_q))
 
-    print(f"  Found {len(correct_images)} model-correct images (answered 'yes' to above question).")
+    print(f"  Found {len(correct_images)} model-correct images (answered 'yes').")
     if len(correct_images) < 5:
         print("  WARNING: very few correct images — results may be noisy.")
 
@@ -317,8 +324,8 @@ def main() -> None:
         print(f"  Layers: {layers_to_sweep}  |  Images: {len(correct_images)}")
         for layer_idx in layers_to_sweep:
             flips = sum(
-                1 for image, row in correct_images
-                if ablate_mlp(model, processor, layers_ref, image, fixed_q, layer_idx) != "yes"
+                1 for image, row, img_q in correct_images
+                if ablate_mlp(model, processor, layers_ref, image, img_q, layer_idx) != "yes"
             )
             mlp_flip_rates[layer_idx] = flips / max(len(correct_images), 1)
             print(f"  layer={layer_idx}  MLP flip_rate={mlp_flip_rates[layer_idx]:.4f}  "
@@ -350,10 +357,10 @@ def main() -> None:
             results[layer_idx] = {}
             for head_idx in range(n_heads):
                 flips = 0
-                for image, row in correct_images:
+                for image, row, img_q in correct_images:
                     ablated = ablate_head(
                         model, processor, layers_ref,
-                        image, fixed_q,
+                        image, img_q,
                         layer_idx=layer_idx, head_idx=head_idx,
                     )
                     if ablated != "yes":   # baseline was "yes"; any change = flip
@@ -402,7 +409,7 @@ def main() -> None:
         "head_dim": HEAD_DIM,
         "n_correct_images": len(correct_images),
         "relation": rel,
-        "fixed_question": fixed_q,
+        "fixed_question": f"Is the [subject] {rel}{_prep} the [object]? (per-image category names)",
         "flip_rates": {
             str(layer_idx): {str(h): results[layer_idx][h] for h in range(n_heads)}
             for layer_idx in results
