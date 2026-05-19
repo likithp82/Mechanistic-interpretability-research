@@ -1,0 +1,112 @@
+{
+  "experiment": "exp10_layerwise_causal_sweep",
+  "timestamp": "2026-05-18T14:29:29.767533",
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "target_layers": [
+    14,
+    21,
+    27
+  ],
+  "n_train": 12,
+  "n_test": 4,
+  "layer_models": {
+    "14": {
+      "train_accuracy": 1.0
+    },
+    "21": {
+      "train_accuracy": 1.0
+    },
+    "27": {
+      "train_accuracy": 1.0
+    }
+  },
+  "sweep_results": {
+    "14": {
+      "pair_results": {
+        "above_to_below": {
+          "clean_accuracy": 1.0,
+          "targeted_rate": 0.0,
+          "control_rate": 0.0
+        },
+        "below_to_above": {
+          "clean_accuracy": 1.0,
+          "targeted_rate": 0.0,
+          "control_rate": 0.0
+        },
+        "left_to_right": {
+          "clean_accuracy": 1.0,
+          "targeted_rate": 0.0,
+          "control_rate": 0.0
+        },
+        "right_to_left": {
+          "clean_accuracy": 1.0,
+          "targeted_rate": 0.0,
+          "control_rate": 0.0
+        }
+      },
+      "avg_targeted": 0.0,
+      "avg_control": 0.0
+    },
+    "21": {
+      "pair_results": {
+        "above_to_below": {
+          "clean_accuracy": 1.0,
+          "targeted_rate": 1.0,
+          "control_rate": 0.0
+        },
+        "below_to_above": {
+          "clean_accuracy": 1.0,
+          "targeted_rate": 1.0,
+          "control_rate": 0.0
+        },
+        "left_to_right": {
+          "clean_accuracy": 1.0,
+          "targeted_rate": 1.0,
+          "control_rate": 0.0
+        },
+        "right_to_left": {
+          "clean_accuracy": 1.0,
+          "targeted_rate": 1.0,
+          "control_rate": 0.0
+        }
+      },
+      "avg_targeted": 1.0,
+      "avg_control": 0.0
+    },
+    "27": {
+      "pair_results": {
+        "above_to_below": {
+          "clean_accuracy": 1.0,
+          "targeted_rate": 0.0,
+          "control_rate": 0.0
+        },
+        "below_to_above": {
+          "clean_accuracy": 1.0,
+          "targeted_rate": 1.0,
+          "control_rate": 0.0
+        },
+        "left_to_right": {
+          "clean_accuracy": 1.0,
+          "targeted_rate": 1.0,
+          "control_rate": 0.0
+        },
+        "right_to_left": {
+          "clean_accuracy": 1.0,
+          "targeted_rate": 1.0,
+          "control_rate": 0.0
+        }
+      },
+      "avg_targeted": 0.75,
+      "avg_control": 0.0
+    }
+  },
+  "best_layer": 21,
+  "best_targeted": 1.0,
+  "best_control": 0.0,
+  "criteria": {
+    "best_targeted_above_0p30": true,
+    "best_control_below_0p20": true,
+    "best_layer_in_expected_range": true
+  },
+  "all_pass": true
+}

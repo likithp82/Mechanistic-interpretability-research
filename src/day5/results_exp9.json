@@ -1,0 +1,39 @@
+{
+  "experiment": "exp9_4way_causal_intervention",
+  "timestamp": "2026-05-18T14:24:34.056379",
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "target_layer": 21,
+  "n_train": 16,
+  "n_test": 6,
+  "train_accuracy": 1.0,
+  "pair_results": {
+    "above_to_below": {
+      "clean_accuracy": 1.0,
+      "patched_target_rate": 1.0,
+      "control_target_rate": 0.0
+    },
+    "below_to_above": {
+      "clean_accuracy": 1.0,
+      "patched_target_rate": 1.0,
+      "control_target_rate": 0.0
+    },
+    "left_to_right": {
+      "clean_accuracy": 1.0,
+      "patched_target_rate": 1.0,
+      "control_target_rate": 0.0
+    },
+    "right_to_left": {
+      "clean_accuracy": 1.0,
+      "patched_target_rate": 1.0,
+      "control_target_rate": 0.0
+    }
+  },
+  "avg_targeted": 1.0,
+  "avg_control": 0.0,
+  "criteria": {
+    "avg_targeted_above_0p30": true,
+    "avg_control_below_0p20": true,
+    "three_or_more_pairs_above_0p50": true
+  },
+  "all_pass": true
+}

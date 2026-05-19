@@ -1,0 +1,51 @@
+{
+  "experiment": "exp8_cross_generalization",
+  "timestamp": "2026-05-18T02:00:45.516044",
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "target_layer": 21,
+  "n_train": 20,
+  "n_test": 15,
+  "train_accuracy": 1.0,
+  "generalization_results": {
+    "novel_shapes": {
+      "description": "Green triangle + orange diamond",
+      "accuracy": 0.5,
+      "above_correct": 0,
+      "below_correct": 15,
+      "n_test": 15
+    },
+    "small_objects": {
+      "description": "Small purple circle + brown square",
+      "accuracy": 0.5,
+      "above_correct": 0,
+      "below_correct": 15,
+      "n_test": 15
+    },
+    "three_objects": {
+      "description": "Red circle + blue square + gray distractor",
+      "accuracy": 0.6666666666666666,
+      "above_correct": 15,
+      "below_correct": 5,
+      "n_test": 15
+    },
+    "swapped_colors": {
+      "description": "Blue circle + red square (swapped from training)",
+      "accuracy": 0.5,
+      "above_correct": 0,
+      "below_correct": 15,
+      "n_test": 15
+    },
+    "four_way_novel": {
+      "description": "4-way on green triangle + orange diamond",
+      "train_accuracy": 1.0,
+      "test_accuracy": 1.0
+    }
+  },
+  "avg_generalization": 0.5416666666666666,
+  "criteria": {
+    "novel_shapes_above_70": false,
+    "avg_generalization_above_70": "False",
+    "four_way_above_40": true
+  },
+  "all_pass": false
+}

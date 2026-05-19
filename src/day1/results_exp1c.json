@@ -1,0 +1,502 @@
+{
+  "experiment": "exp1c_spatial_baseline",
+  "timestamp": "2026-05-18T00:16:13.286177",
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "overall_accuracy": 1.0,
+  "per_relation": {
+    "above": 1.0,
+    "below": 1.0,
+    "left": 1.0,
+    "right": 1.0
+  },
+  "answer_distribution": {
+    "above": 10,
+    "below": 10,
+    "left": 10,
+    "right": 10
+  },
+  "total_correct": 40,
+  "total": 40,
+  "all_results": [
+    {
+      "relation": "above",
+      "colors": [
+        "red",
+        "blue"
+      ],
+      "question": "Is the red circle above or below the blue square? Answer with just 'above' or 'below'.",
+      "answer": "above",
+      "correct": "above",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "above",
+      "colors": [
+        "green",
+        "orange"
+      ],
+      "question": "Is the green circle above or below the orange square? Answer with just 'above' or 'below'.",
+      "answer": "above",
+      "correct": "above",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "above",
+      "colors": [
+        "purple",
+        "cyan"
+      ],
+      "question": "Is the purple circle above or below the cyan square? Answer with just 'above' or 'below'.",
+      "answer": "above",
+      "correct": "above",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "above",
+      "colors": [
+        "red",
+        "green"
+      ],
+      "question": "Is the red circle above or below the green square? Answer with just 'above' or 'below'.",
+      "answer": "above",
+      "correct": "above",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "above",
+      "colors": [
+        "blue",
+        "orange"
+      ],
+      "question": "Is the blue circle above or below the orange square? Answer with just 'above' or 'below'.",
+      "answer": "above",
+      "correct": "above",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "above",
+      "colors": [
+        "red",
+        "blue"
+      ],
+      "question": "Is the red circle above or below the blue square? Answer with just 'above' or 'below'.",
+      "answer": "above",
+      "correct": "above",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "above",
+      "colors": [
+        "green",
+        "orange"
+      ],
+      "question": "Is the green circle above or below the orange square? Answer with just 'above' or 'below'.",
+      "answer": "above",
+      "correct": "above",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "above",
+      "colors": [
+        "purple",
+        "cyan"
+      ],
+      "question": "Is the purple circle above or below the cyan square? Answer with just 'above' or 'below'.",
+      "answer": "above",
+      "correct": "above",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "above",
+      "colors": [
+        "red",
+        "green"
+      ],
+      "question": "Is the red circle above or below the green square? Answer with just 'above' or 'below'.",
+      "answer": "above",
+      "correct": "above",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "above",
+      "colors": [
+        "blue",
+        "orange"
+      ],
+      "question": "Is the blue circle above or below the orange square? Answer with just 'above' or 'below'.",
+      "answer": "above",
+      "correct": "above",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "below",
+      "colors": [
+        "red",
+        "blue"
+      ],
+      "question": "Is the red circle above or below the blue square? Answer with just 'above' or 'below'.",
+      "answer": "below",
+      "correct": "below",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "below",
+      "colors": [
+        "green",
+        "orange"
+      ],
+      "question": "Is the green circle above or below the orange square? Answer with just 'above' or 'below'.",
+      "answer": "below",
+      "correct": "below",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "below",
+      "colors": [
+        "purple",
+        "cyan"
+      ],
+      "question": "Is the purple circle above or below the cyan square? Answer with just 'above' or 'below'.",
+      "answer": "below",
+      "correct": "below",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "below",
+      "colors": [
+        "red",
+        "green"
+      ],
+      "question": "Is the red circle above or below the green square? Answer with just 'above' or 'below'.",
+      "answer": "below",
+      "correct": "below",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "below",
+      "colors": [
+        "blue",
+        "orange"
+      ],
+      "question": "Is the blue circle above or below the orange square? Answer with just 'above' or 'below'.",
+      "answer": "below",
+      "correct": "below",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "below",
+      "colors": [
+        "red",
+        "blue"
+      ],
+      "question": "Is the red circle above or below the blue square? Answer with just 'above' or 'below'.",
+      "answer": "below",
+      "correct": "below",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "below",
+      "colors": [
+        "green",
+        "orange"
+      ],
+      "question": "Is the green circle above or below the orange square? Answer with just 'above' or 'below'.",
+      "answer": "below",
+      "correct": "below",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "below",
+      "colors": [
+        "purple",
+        "cyan"
+      ],
+      "question": "Is the purple circle above or below the cyan square? Answer with just 'above' or 'below'.",
+      "answer": "below",
+      "correct": "below",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "below",
+      "colors": [
+        "red",
+        "green"
+      ],
+      "question": "Is the red circle above or below the green square? Answer with just 'above' or 'below'.",
+      "answer": "below",
+      "correct": "below",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "below",
+      "colors": [
+        "blue",
+        "orange"
+      ],
+      "question": "Is the blue circle above or below the orange square? Answer with just 'above' or 'below'.",
+      "answer": "below",
+      "correct": "below",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "left",
+      "colors": [
+        "red",
+        "blue"
+      ],
+      "question": "Is the red circle to the left or right of the blue square? Answer with just 'left' or 'right'.",
+      "answer": "left",
+      "correct": "left",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "left",
+      "colors": [
+        "green",
+        "orange"
+      ],
+      "question": "Is the green circle to the left or right of the orange square? Answer with just 'left' or 'right'.",
+      "answer": "left",
+      "correct": "left",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "left",
+      "colors": [
+        "purple",
+        "cyan"
+      ],
+      "question": "Is the purple circle to the left or right of the cyan square? Answer with just 'left' or 'right'.",
+      "answer": "left",
+      "correct": "left",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "left",
+      "colors": [
+        "red",
+        "green"
+      ],
+      "question": "Is the red circle to the left or right of the green square? Answer with just 'left' or 'right'.",
+      "answer": "left",
+      "correct": "left",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "left",
+      "colors": [
+        "blue",
+        "orange"
+      ],
+      "question": "Is the blue circle to the left or right of the orange square? Answer with just 'left' or 'right'.",
+      "answer": "left",
+      "correct": "left",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "left",
+      "colors": [
+        "red",
+        "blue"
+      ],
+      "question": "Is the red circle to the left or right of the blue square? Answer with just 'left' or 'right'.",
+      "answer": "left",
+      "correct": "left",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "left",
+      "colors": [
+        "green",
+        "orange"
+      ],
+      "question": "Is the green circle to the left or right of the orange square? Answer with just 'left' or 'right'.",
+      "answer": "left",
+      "correct": "left",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "left",
+      "colors": [
+        "purple",
+        "cyan"
+      ],
+      "question": "Is the purple circle to the left or right of the cyan square? Answer with just 'left' or 'right'.",
+      "answer": "left",
+      "correct": "left",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "left",
+      "colors": [
+        "red",
+        "green"
+      ],
+      "question": "Is the red circle to the left or right of the green square? Answer with just 'left' or 'right'.",
+      "answer": "left",
+      "correct": "left",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "left",
+      "colors": [
+        "blue",
+        "orange"
+      ],
+      "question": "Is the blue circle to the left or right of the orange square? Answer with just 'left' or 'right'.",
+      "answer": "left",
+      "correct": "left",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "right",
+      "colors": [
+        "red",
+        "blue"
+      ],
+      "question": "Is the red circle to the left or right of the blue square? Answer with just 'left' or 'right'.",
+      "answer": "right",
+      "correct": "right",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "right",
+      "colors": [
+        "green",
+        "orange"
+      ],
+      "question": "Is the green circle to the left or right of the orange square? Answer with just 'left' or 'right'.",
+      "answer": "right",
+      "correct": "right",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "right",
+      "colors": [
+        "purple",
+        "cyan"
+      ],
+      "question": "Is the purple circle to the left or right of the cyan square? Answer with just 'left' or 'right'.",
+      "answer": "right",
+      "correct": "right",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "right",
+      "colors": [
+        "red",
+        "green"
+      ],
+      "question": "Is the red circle to the left or right of the green square? Answer with just 'left' or 'right'.",
+      "answer": "right",
+      "correct": "right",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "right",
+      "colors": [
+        "blue",
+        "orange"
+      ],
+      "question": "Is the blue circle to the left or right of the orange square? Answer with just 'left' or 'right'.",
+      "answer": "right",
+      "correct": "right",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "right",
+      "colors": [
+        "red",
+        "blue"
+      ],
+      "question": "Is the red circle to the left or right of the blue square? Answer with just 'left' or 'right'.",
+      "answer": "right",
+      "correct": "right",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "right",
+      "colors": [
+        "green",
+        "orange"
+      ],
+      "question": "Is the green circle to the left or right of the orange square? Answer with just 'left' or 'right'.",
+      "answer": "right",
+      "correct": "right",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "right",
+      "colors": [
+        "purple",
+        "cyan"
+      ],
+      "question": "Is the purple circle to the left or right of the cyan square? Answer with just 'left' or 'right'.",
+      "answer": "right",
+      "correct": "right",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "right",
+      "colors": [
+        "red",
+        "green"
+      ],
+      "question": "Is the red circle to the left or right of the green square? Answer with just 'left' or 'right'.",
+      "answer": "right",
+      "correct": "right",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    },
+    {
+      "relation": "right",
+      "colors": [
+        "blue",
+        "orange"
+      ],
+      "question": "Is the blue circle to the left or right of the orange square? Answer with just 'left' or 'right'.",
+      "answer": "right",
+      "correct": "right",
+      "is_correct": true,
+      "is_explicit_wrong": false
+    }
+  ]
+}

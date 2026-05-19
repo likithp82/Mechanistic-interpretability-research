@@ -1,0 +1,175 @@
+{
+  "experiment": "exp7_activation_patching",
+  "timestamp": "2026-05-18T01:17:43.410528",
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "primary_layer": 21,
+  "direction_magnitude": 14.53815746307373,
+  "flip_rate_above_to_below": 0.0,
+  "flip_rate_below_to_above": 0.4,
+  "average_flip_rate": 0.2,
+  "control_flip_rate": 0.0,
+  "causal_gap": 0.2,
+  "layer_flip_rates": {
+    "7": 0.0,
+    "14": 0.0,
+    "21": 0.0,
+    "27": 0.0
+  },
+  "scale_results": {
+    "0.25": 0.0,
+    "0.5": 0.0,
+    "1.0": 0.0,
+    "1.5": 1.0,
+    "2.0": 1.0,
+    "3.0": 1.0
+  },
+  "criteria": {
+    "flip_rate_above_50": false,
+    "control_below_20": true,
+    "causal_gap": 0.2
+  },
+  "flip_details_a2b": [
+    {
+      "clean_answer": "The red circle is above the blue square.",
+      "patched_answer": "The red circle is above the blue square.",
+      "clean_says_above": true,
+      "patched_says_below": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The green circle is above the orange square.",
+      "patched_answer": "The green circle is above the orange square.",
+      "clean_says_above": true,
+      "patched_says_below": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The purple circle is above the cyan square.",
+      "patched_answer": "The purple circle is above the cyan square.",
+      "clean_says_above": true,
+      "patched_says_below": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The red circle is above the green square.",
+      "patched_answer": "The red circle is above the green square.",
+      "clean_says_above": true,
+      "patched_says_below": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The blue circle is above the orange square.",
+      "patched_answer": "The blue circle is above the orange square.",
+      "clean_says_above": true,
+      "patched_says_below": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The red circle is above the blue square.",
+      "patched_answer": "The red circle is above the blue square.",
+      "clean_says_above": true,
+      "patched_says_below": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The green circle is above the orange square.",
+      "patched_answer": "The green circle is above the orange square.",
+      "clean_says_above": true,
+      "patched_says_below": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The purple circle is above the cyan square.",
+      "patched_answer": "The purple circle is above the cyan square.",
+      "clean_says_above": true,
+      "patched_says_below": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The red circle is above the green square.",
+      "patched_answer": "The red circle is above the green square.",
+      "clean_says_above": true,
+      "patched_says_below": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The blue circle is above the orange square.",
+      "patched_answer": "The blue circle is above the orange square.",
+      "clean_says_above": true,
+      "patched_says_below": false,
+      "flipped": false
+    }
+  ],
+  "flip_details_b2a": [
+    {
+      "clean_answer": "The red circle is below the blue square.",
+      "patched_answer": "The red circle is above the blue square.",
+      "clean_says_below": true,
+      "patched_says_above": true,
+      "flipped": true
+    },
+    {
+      "clean_answer": "The green circle is below the orange square.",
+      "patched_answer": "The green circle is below the orange square.",
+      "clean_says_below": true,
+      "patched_says_above": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The purple circle is below the cyan square.",
+      "patched_answer": "The purple circle is below the cyan square.",
+      "clean_says_below": true,
+      "patched_says_above": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The red circle is below the green square.",
+      "patched_answer": "The green square is above the red circle.",
+      "clean_says_below": true,
+      "patched_says_above": true,
+      "flipped": true
+    },
+    {
+      "clean_answer": "The blue circle is below the orange square.",
+      "patched_answer": "The blue circle is below the orange square.",
+      "clean_says_below": true,
+      "patched_says_above": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The red circle is below the blue square.",
+      "patched_answer": "The red circle is above the blue square.",
+      "clean_says_below": true,
+      "patched_says_above": true,
+      "flipped": true
+    },
+    {
+      "clean_answer": "The green circle is below the orange square.",
+      "patched_answer": "The green circle is below the orange square.",
+      "clean_says_below": true,
+      "patched_says_above": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The purple circle is below the cyan square.",
+      "patched_answer": "The purple circle is below the cyan square.",
+      "clean_says_below": true,
+      "patched_says_above": false,
+      "flipped": false
+    },
+    {
+      "clean_answer": "The red circle is below the green square.",
+      "patched_answer": "The green square is above the red circle.",
+      "clean_says_below": true,
+      "patched_says_above": true,
+      "flipped": true
+    },
+    {
+      "clean_answer": "The blue circle is below the orange square.",
+      "patched_answer": "The blue circle is below the orange square.",
+      "clean_says_below": true,
+      "patched_says_above": false,
+      "flipped": false
+    }
+  ]
+}

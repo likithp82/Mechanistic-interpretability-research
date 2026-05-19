@@ -1,0 +1,141 @@
+{
+  "experiment": "exp12_head_level_localization",
+  "timestamp": "2026-05-18T15:09:36.764844",
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "target_layer": 21,
+  "num_heads": 12,
+  "head_dim": 128,
+  "n_train": 12,
+  "n_test": 4,
+  "pairings": [
+    [
+      "above",
+      "below"
+    ],
+    [
+      "below",
+      "above"
+    ],
+    [
+      "left",
+      "right"
+    ],
+    [
+      "right",
+      "left"
+    ]
+  ],
+  "eval_sets": [
+    "cluttered",
+    "adversarial",
+    "novel_shapes",
+    "three_objects"
+  ],
+  "baseline_steering": 1.0,
+  "head_results": {
+    "0": {
+      "ablated_steering_rate": 1.0,
+      "steering_drop": 0.0
+    },
+    "1": {
+      "ablated_steering_rate": 1.0,
+      "steering_drop": 0.0
+    },
+    "2": {
+      "ablated_steering_rate": 1.0,
+      "steering_drop": 0.0
+    },
+    "3": {
+      "ablated_steering_rate": 1.0,
+      "steering_drop": 0.0
+    },
+    "4": {
+      "ablated_steering_rate": 1.0,
+      "steering_drop": 0.0
+    },
+    "5": {
+      "ablated_steering_rate": 1.0,
+      "steering_drop": 0.0
+    },
+    "6": {
+      "ablated_steering_rate": 1.0,
+      "steering_drop": 0.0
+    },
+    "7": {
+      "ablated_steering_rate": 1.0,
+      "steering_drop": 0.0
+    },
+    "8": {
+      "ablated_steering_rate": 1.0,
+      "steering_drop": 0.0
+    },
+    "9": {
+      "ablated_steering_rate": 1.0,
+      "steering_drop": 0.0
+    },
+    "10": {
+      "ablated_steering_rate": 1.0,
+      "steering_drop": 0.0
+    },
+    "11": {
+      "ablated_steering_rate": 0.9375,
+      "steering_drop": 0.0625
+    }
+  },
+  "top_head": "11",
+  "top3_heads": [
+    11,
+    0,
+    1
+  ],
+  "top3_rate": 0.9375,
+  "random_group_rates": [
+    {
+      "group": [
+        10,
+        1,
+        0
+      ],
+      "rate": 1.0
+    },
+    {
+      "group": [
+        11,
+        4,
+        3
+      ],
+      "rate": 1.0
+    },
+    {
+      "group": [
+        3,
+        2,
+        1
+      ],
+      "rate": 1.0
+    },
+    {
+      "group": [
+        10,
+        8,
+        1
+      ],
+      "rate": 1.0
+    },
+    {
+      "group": [
+        9,
+        6,
+        0
+      ],
+      "rate": 1.0
+    }
+  ],
+  "random_group_mean_rate": 1.0,
+  "criteria": {
+    "baseline_steering_above_0p50": true,
+    "top_head_drop_above_0p05": true,
+    "top3_worse_than_random_by_0p05": true
+  },
+  "all_pass": true
+}

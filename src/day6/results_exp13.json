@@ -1,0 +1,52 @@
+{
+  "experiment": "exp13_real_data_baseline",
+  "timestamp": "2026-05-19T09:08:23.462282",
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "eval_rows": 500,
+  "overall_accuracy": null,
+  "per_relation_accuracy": {
+    "above": null,
+    "below": null,
+    "left": null,
+    "right": null
+  },
+  "probe_layer": 21,
+  "probe_train_accuracy_real": 0.39,
+  "layer_probe_sweep": {
+    "0": 0.39,
+    "1": 0.39,
+    "2": 0.41000000000000003,
+    "3": 0.41000000000000003,
+    "4": 0.39,
+    "5": 0.39,
+    "6": 0.38,
+    "7": 0.37,
+    "8": 0.4,
+    "9": 0.4,
+    "10": 0.41,
+    "11": 0.4,
+    "12": 0.39,
+    "13": 0.38,
+    "14": 0.37,
+    "15": 0.36,
+    "16": 0.38,
+    "17": 0.37,
+    "18": 0.38,
+    "19": 0.38,
+    "20": 0.39,
+    "21": 0.39,
+    "22": 0.38,
+    "23": 0.39,
+    "24": 0.39,
+    "25": 0.38,
+    "26": 0.4,
+    "27": 0.41
+  },
+  "best_probe_layer_real": 2,
+  "probe_mode": "binary_above_vs_below",
+  "params": {
+    "max_eval": 500,
+    "max_probe_per_class": 50,
+    "seed": 42
+  }
+}

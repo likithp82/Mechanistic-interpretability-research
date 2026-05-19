@@ -1,0 +1,1586 @@
+{
+  "experiment": "exp11_decode_bottleneck_test",
+  "timestamp": "2026-05-18T15:00:49.655793",
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "target_layer": 21,
+  "train_accuracy": 1.0,
+  "n_train": 20,
+  "n_test": 10,
+  "level_results": {
+    "clean_standard": {
+      "model_accuracy": 1.0,
+      "probe_accuracy": 1.0,
+      "bottleneck_rate": 0.0,
+      "model_correct": 40,
+      "probe_correct": 40,
+      "bottleneck_hits": 0,
+      "total": 40,
+      "ci95": {
+        "model_accuracy": [
+          1.0,
+          1.0
+        ],
+        "probe_accuracy": [
+          1.0,
+          1.0
+        ],
+        "bottleneck_rate": [
+          0.0,
+          0.0
+        ]
+      },
+      "sample_details": [
+        {
+          "set": "clean_standard",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "clean_standard",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        }
+      ]
+    },
+    "hard_synthetic": {
+      "model_accuracy": 1.0,
+      "probe_accuracy": 1.0,
+      "bottleneck_rate": 0.0,
+      "model_correct": 40,
+      "probe_correct": 40,
+      "bottleneck_hits": 0,
+      "total": 40,
+      "ci95": {
+        "model_accuracy": [
+          1.0,
+          1.0
+        ],
+        "probe_accuracy": [
+          1.0,
+          1.0
+        ],
+        "bottleneck_rate": [
+          0.0,
+          0.0
+        ]
+      },
+      "sample_details": [
+        {
+          "set": "hard_synthetic",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "hard_synthetic",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        }
+      ]
+    },
+    "cluttered": {
+      "model_accuracy": 1.0,
+      "probe_accuracy": 1.0,
+      "bottleneck_rate": 0.0,
+      "model_correct": 40,
+      "probe_correct": 40,
+      "bottleneck_hits": 0,
+      "total": 40,
+      "ci95": {
+        "model_accuracy": [
+          1.0,
+          1.0
+        ],
+        "probe_accuracy": [
+          1.0,
+          1.0
+        ],
+        "bottleneck_rate": [
+          0.0,
+          0.0
+        ]
+      },
+      "sample_details": [
+        {
+          "set": "cluttered",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "cluttered",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        }
+      ]
+    },
+    "adversarial": {
+      "model_accuracy": 1.0,
+      "probe_accuracy": 1.0,
+      "bottleneck_rate": 0.0,
+      "model_correct": 40,
+      "probe_correct": 40,
+      "bottleneck_hits": 0,
+      "total": 40,
+      "ci95": {
+        "model_accuracy": [
+          1.0,
+          1.0
+        ],
+        "probe_accuracy": [
+          1.0,
+          1.0
+        ],
+        "bottleneck_rate": [
+          0.0,
+          0.0
+        ]
+      },
+      "sample_details": [
+        {
+          "set": "adversarial",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "adversarial",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        }
+      ]
+    },
+    "novel_shapes": {
+      "model_accuracy": 0.5,
+      "probe_accuracy": 0.75,
+      "bottleneck_rate": 0.5,
+      "model_correct": 20,
+      "probe_correct": 30,
+      "bottleneck_hits": 20,
+      "total": 40,
+      "ci95": {
+        "model_accuracy": [
+          0.3450483946517494,
+          0.6549516053482506
+        ],
+        "probe_accuracy": [
+          0.6158079734112343,
+          0.8841920265887657
+        ],
+        "bottleneck_rate": [
+          0.3450483946517494,
+          0.6549516053482506
+        ]
+      },
+      "sample_details": [
+        {
+          "set": "novel_shapes",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": false
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": false
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": false
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": false
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": false
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": false
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": false
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": false
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": false
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": false
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "below",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": false,
+          "probe_correct": true
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "below",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": false,
+          "probe_correct": true
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "below",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": false,
+          "probe_correct": true
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "below",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": false,
+          "probe_correct": true
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "below",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": false,
+          "probe_correct": true
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "below",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": false,
+          "probe_correct": true
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "below",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": false,
+          "probe_correct": true
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "below",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": false,
+          "probe_correct": true
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "below",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": false,
+          "probe_correct": true
+        },
+        {
+          "set": "novel_shapes",
+          "relation": "below",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "below",
+          "model_correct": false,
+          "probe_correct": true
+        }
+      ]
+    },
+    "small_objects": {
+      "model_accuracy": 1.0,
+      "probe_accuracy": 1.0,
+      "bottleneck_rate": 0.0,
+      "model_correct": 40,
+      "probe_correct": 40,
+      "bottleneck_hits": 0,
+      "total": 40,
+      "ci95": {
+        "model_accuracy": [
+          1.0,
+          1.0
+        ],
+        "probe_accuracy": [
+          1.0,
+          1.0
+        ],
+        "bottleneck_rate": [
+          0.0,
+          0.0
+        ]
+      },
+      "sample_details": [
+        {
+          "set": "small_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "small_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        }
+      ]
+    },
+    "three_objects": {
+      "model_accuracy": 1.0,
+      "probe_accuracy": 1.0,
+      "bottleneck_rate": 0.0,
+      "model_correct": 40,
+      "probe_correct": 40,
+      "bottleneck_hits": 0,
+      "total": 40,
+      "ci95": {
+        "model_accuracy": [
+          1.0,
+          1.0
+        ],
+        "probe_accuracy": [
+          1.0,
+          1.0
+        ],
+        "bottleneck_rate": [
+          0.0,
+          0.0
+        ]
+      },
+      "sample_details": [
+        {
+          "set": "three_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "three_objects",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        }
+      ]
+    },
+    "swapped_colors": {
+      "model_accuracy": 1.0,
+      "probe_accuracy": 1.0,
+      "bottleneck_rate": 0.0,
+      "model_correct": 40,
+      "probe_correct": 40,
+      "bottleneck_hits": 0,
+      "total": 40,
+      "ci95": {
+        "model_accuracy": [
+          1.0,
+          1.0
+        ],
+        "probe_accuracy": [
+          1.0,
+          1.0
+        ],
+        "bottleneck_rate": [
+          0.0,
+          0.0
+        ]
+      },
+      "sample_details": [
+        {
+          "set": "swapped_colors",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "above",
+          "answer": "The red circle is above the blue square.",
+          "probe_pred": "above",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        },
+        {
+          "set": "swapped_colors",
+          "relation": "below",
+          "answer": "The red circle is below the blue square.",
+          "probe_pred": "below",
+          "model_correct": true,
+          "probe_correct": true
+        }
+      ]
+    }
+  },
+  "clean_summary": {
+    "model_accuracy": 1.0,
+    "probe_accuracy": 1.0,
+    "bottleneck_rate": 0.0,
+    "model_correct": 40,
+    "probe_correct": 40,
+    "bottleneck_hits": 0,
+    "total": 40,
+    "ci95": {
+      "model_accuracy": [
+        1.0,
+        1.0
+      ],
+      "probe_accuracy": [
+        1.0,
+        1.0
+      ],
+      "bottleneck_rate": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "hard_summary": {
+    "model_accuracy": 0.9285714285714286,
+    "probe_accuracy": 0.9642857142857143,
+    "bottleneck_rate": 0.07142857142857142,
+    "model_correct": 260,
+    "probe_correct": 270,
+    "bottleneck_hits": 20,
+    "total": 280,
+    "ci95": {
+      "model_accuracy": [
+        0.8984052223134319,
+        0.9587376348294253
+      ],
+      "probe_accuracy": [
+        0.9425486491664301,
+        0.9860227794049985
+      ],
+      "bottleneck_rate": [
+        0.041262365170574716,
+        0.10159477768656813
+      ]
+    }
+  },
+  "bottleneck_gap_hard_minus_clean": 0.07142857142857142,
+  "prior_results": {
+    "sky_ground": {
+      "congruent": {
+        "model_correct": 10,
+        "total": 10,
+        "accuracy": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "incongruent": {
+        "model_correct": 0,
+        "total": 10,
+        "accuracy": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "roof_floor": {
+      "congruent": {
+        "model_correct": 10,
+        "total": 10,
+        "accuracy": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "incongruent": {
+        "model_correct": 0,
+        "total": 10,
+        "accuracy": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "criteria": {
+    "probe_not_worse_than_model_hard": true,
+    "clean_probe_high": true,
+    "bottleneck_gap_hard_vs_clean_above_0p05": true
+  },
+  "all_pass": true
+}

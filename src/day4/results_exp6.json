@@ -1,0 +1,91 @@
+{
+  "experiment": "exp6_hard_images",
+  "timestamp": "2026-05-18T01:13:05.164275",
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "n_per_level": 10,
+  "accuracy_results": {
+    "level2_hard": {
+      "overall": 0.8,
+      "per_relation": {
+        "above": 1.0,
+        "below": 0.2,
+        "left": 1.0,
+        "right": 1.0
+      },
+      "total_correct": 32,
+      "total": 40
+    },
+    "level3_cluttered": {
+      "overall": 0.6,
+      "per_relation": {
+        "above": 1.0,
+        "below": 0.0,
+        "left": 1.0,
+        "right": 0.4
+      },
+      "total_correct": 24,
+      "total": 40
+    },
+    "level4_adversarial": {
+      "overall": 0.775,
+      "per_relation": {
+        "above": 1.0,
+        "below": 0.1,
+        "left": 1.0,
+        "right": 1.0
+      },
+      "total_correct": 31,
+      "total": 40
+    }
+  },
+  "probe_results": {
+    "level2_hard": {
+      "four_way_accuracy": 0.975,
+      "four_way_std": 0.049999999999999996,
+      "relation_direction_norm": 0.3742923526812138
+    },
+    "level3_cluttered": {
+      "four_way_accuracy": 1.0,
+      "four_way_std": 0.0,
+      "relation_direction_norm": 0.4121425410345942
+    },
+    "level4_adversarial": {
+      "four_way_accuracy": 0.95,
+      "four_way_std": 0.06123724356957946,
+      "relation_direction_norm": 0.33247632077948736
+    }
+  },
+  "position_results": {
+    "0": {
+      "r2_x": -0.6676138639450073,
+      "r2_y": 0.019371509552001953,
+      "r2_avg": -0.3241211771965027
+    },
+    "7": {
+      "r2_x": -0.9166309833526611,
+      "r2_y": 0.11291974782943726,
+      "r2_avg": -0.40185561776161194
+    },
+    "14": {
+      "r2_x": 0.5687191486358643,
+      "r2_y": 0.8414868712425232,
+      "r2_avg": 0.7051030099391937
+    },
+    "21": {
+      "r2_x": 0.6041402816772461,
+      "r2_y": 0.9067772626876831,
+      "r2_avg": 0.7554587721824646
+    },
+    "27": {
+      "r2_x": 0.6148660182952881,
+      "r2_y": 0.9234268665313721,
+      "r2_avg": 0.7691464424133301
+    }
+  },
+  "criteria": {
+    "accuracy_above_70_level3": false,
+    "probe_above_40_level3": true,
+    "position_r2_above_03": true
+  },
+  "all_pass": false
+}

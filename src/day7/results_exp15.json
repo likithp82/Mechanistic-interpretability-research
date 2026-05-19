@@ -1,0 +1,60 @@
+{
+  "experiment": "exp15_attention_head_sweep",
+  "timestamp": "2026-05-19T13:13:28.528049",
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "peak_layer": 21,
+  "layer_window": 0,
+  "layers_swept": [
+    21
+  ],
+  "n_heads": 12,
+  "head_dim": 128,
+  "n_correct_images": 60,
+  "fixed_question": "Is object A above object B?",
+  "flip_rates": {
+    "21": {
+      "0": 0.0,
+      "1": 0.016666666666666666,
+      "2": 0.03333333333333333,
+      "3": 0.016666666666666666,
+      "4": 0.03333333333333333,
+      "5": 0.016666666666666666,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.016666666666666666,
+      "9": 0.0,
+      "10": 0.016666666666666666,
+      "11": 0.03333333333333333
+    }
+  },
+  "top5_causal_heads": [
+    {
+      "layer": 21,
+      "head": 2,
+      "flip_rate": 0.03333333333333333
+    },
+    {
+      "layer": 21,
+      "head": 4,
+      "flip_rate": 0.03333333333333333
+    },
+    {
+      "layer": 21,
+      "head": 11,
+      "flip_rate": 0.03333333333333333
+    },
+    {
+      "layer": 21,
+      "head": 1,
+      "flip_rate": 0.016666666666666666
+    },
+    {
+      "layer": 21,
+      "head": 3,
+      "flip_rate": 0.016666666666666666
+    }
+  ],
+  "mlp_flip_rates": {
+    "21": 0.25
+  }
+}

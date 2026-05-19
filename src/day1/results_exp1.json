@@ -1,0 +1,415 @@
+{
+  "experiment": "exp1_activation_hooks",
+  "timestamp": "2026-05-18T00:13:27.531548",
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "num_layers": 28,
+  "hidden_dim": 1536,
+  "question": "Is the red circle above or below the blue square?",
+  "answer": "The red circle is above the blue square.",
+  "load_time_s": 12.33082127571106,
+  "gen_time_s": 9.130167007446289,
+  "input_tokens": 277,
+  "criteria": {
+    "model_loaded": true,
+    "all_layers_captured": true,
+    "correct_shapes": true,
+    "no_nan_inf": true,
+    "coherent_answer": true
+  },
+  "overall_pass": true,
+  "layer_info": [
+    {
+      "name": "layer_0",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 7.340434551239014,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.001479779020883143,
+      "std": 0.18735013902187347
+    },
+    {
+      "name": "layer_1",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 9.738964080810547,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.004796011373400688,
+      "std": 0.24852930009365082
+    },
+    {
+      "name": "layer_2",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 12.449487686157227,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.007843174040317535,
+      "std": 0.31766167283058167
+    },
+    {
+      "name": "layer_3",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 13.939291000366211,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.007959780283272266,
+      "std": 0.3556949198246002
+    },
+    {
+      "name": "layer_4",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 17.700469970703125,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.012182529084384441,
+      "std": 0.45161929726600647
+    },
+    {
+      "name": "layer_5",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 18.368141174316406,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.004699476063251495,
+      "std": 0.46880170702934265
+    },
+    {
+      "name": "layer_6",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 22.807918548583984,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.01850658468902111,
+      "std": 0.5818509459495544
+    },
+    {
+      "name": "layer_7",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 26.463632583618164,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.02241463027894497,
+      "std": 0.6750809550285339
+    },
+    {
+      "name": "layer_8",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 24.014484405517578,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.023717254400253296,
+      "std": 0.6124823093414307
+    },
+    {
+      "name": "layer_9",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 25.326980590820312,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.021571559831500053,
+      "std": 0.6460812091827393
+    },
+    {
+      "name": "layer_10",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 26.126474380493164,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.021648963913321495,
+      "std": 0.6664958596229553
+    },
+    {
+      "name": "layer_11",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 28.94648551940918,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.02052493393421173,
+      "std": 0.7385396957397461
+    },
+    {
+      "name": "layer_12",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 29.79924201965332,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.016286395490169525,
+      "std": 0.7604162096977234
+    },
+    {
+      "name": "layer_13",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 30.463855743408203,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.021992063149809837,
+      "std": 0.7772428393363953
+    },
+    {
+      "name": "layer_14",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 31.89080238342285,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.025712857022881508,
+      "std": 0.8135687112808228
+    },
+    {
+      "name": "layer_15",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 35.077335357666016,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.026858458295464516,
+      "std": 0.8949046730995178
+    },
+    {
+      "name": "layer_16",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 37.2911262512207,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.036102425307035446,
+      "std": 0.9511268138885498
+    },
+    {
+      "name": "layer_17",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 44.595237731933594,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.029968926683068275,
+      "std": 1.1378463506698608
+    },
+    {
+      "name": "layer_18",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 46.646297454833984,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.022346695885062218,
+      "std": 1.1903822422027588
+    },
+    {
+      "name": "layer_19",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 52.569087982177734,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.005452215671539307,
+      "std": 1.3417532444000244
+    },
+    {
+      "name": "layer_20",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 64.92903900146484,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": -0.021763553842902184,
+      "std": 1.6570942401885986
+    },
+    {
+      "name": "layer_21",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 79.84546661376953,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.01152212917804718,
+      "std": 2.037929058074951
+    },
+    {
+      "name": "layer_22",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 91.61056518554688,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.018476584926247597,
+      "std": 2.338178873062134
+    },
+    {
+      "name": "layer_23",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 109.52460479736328,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.010072375647723675,
+      "std": 2.79546856880188
+    },
+    {
+      "name": "layer_24",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 127.80169677734375,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.026272237300872803,
+      "std": 3.2618825435638428
+    },
+    {
+      "name": "layer_25",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 146.9713897705078,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.03266032412648201,
+      "std": 3.7511301040649414
+    },
+    {
+      "name": "layer_26",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 172.97129821777344,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.058707576245069504,
+      "std": 4.414498805999756
+    },
+    {
+      "name": "layer_27",
+      "shape": [
+        1,
+        1,
+        1536
+      ],
+      "dtype": "torch.float16",
+      "norm": 155.4695587158203,
+      "has_nan": false,
+      "has_inf": false,
+      "mean": 0.035856086760759354,
+      "std": 3.9680159091949463
+    }
+  ],
+  "gpu": "mps"
+}
