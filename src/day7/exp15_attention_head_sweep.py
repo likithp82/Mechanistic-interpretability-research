@@ -240,8 +240,10 @@ def main() -> None:
 
     # Build relation-specific question and candidate filter
     rel = args.relation
+    # Use natural phrasing: "above"/"below" have no preposition; left/right use "to the X of"
     _prep = "" if rel in ("above", "below") else " of"
-    fixed_q = f"Is object A {rel}{_prep} object B?"
+    _rel_phrase = f"to the {rel} of" if rel in ("left", "right") else rel
+    fixed_q = f"Is object A {_rel_phrase} object B?"
     # above/below use vflip (flipping an orig-below gives above); others use original
     candidate_transform = "vflip" if rel == "above" else "original"
 
@@ -292,6 +294,7 @@ def main() -> None:
     print(f"\n[Phase 1] Baseline pass — finding images where model answers 'yes' correctly")
     print(f"  Using per-image category-name questions (subject/object from manifest).")
     correct_images: list[tuple[Image.Image, dict, str]] = []  # (image, row, question)
+    _debug_shown = 0  # show first 5 raw outputs to diagnose
 
     for row in candidates:
         if len(correct_images) >= args.max_images:
@@ -302,7 +305,20 @@ def main() -> None:
         image = Image.open(img_path).convert("RGB")
         subj_cat = row.get("subject", {}).get("category", "object A")
         obj_cat  = row.get("object",  {}).get("category", "object B")
-        img_q = f"Is the {subj_cat} {rel}{_prep} the {obj_cat}?"
+        img_q = f"Is the {subj_cat} {_rel_phrase} the {obj_cat}?"
+
+        # -- raw debug: show first 5 model outputs before yes/no collapse --
+        if _debug_shown < 5:
+            prompt = build_prompt(img_q)
+            _inp = processor(text=prompt, images=[image], return_tensors="pt").to(model.device)
+            with torch.no_grad():
+                _out = model.generate(**_inp, max_new_tokens=10)
+            _raw = processor.decode(
+                _out[0][_inp["input_ids"].shape[1]:], skip_special_tokens=True
+            ).strip()
+            print(f"  [debug] q='{img_q}'  raw='{_raw}'")
+            _debug_shown += 1
+
         ans = get_yes_no(model, processor, image, img_q)
         if ans == "yes":
             correct_images.append((image, row, img_q))
@@ -409,7 +425,7 @@ def main() -> None:
         "head_dim": HEAD_DIM,
         "n_correct_images": len(correct_images),
         "relation": rel,
-        "fixed_question": f"Is the [subject] {rel}{_prep} the [object]? (per-image category names)",
+        "fixed_question": f"Is the [subject] {_rel_phrase} the [object]? (per-image category names)",
         "flip_rates": {
             str(layer_idx): {str(h): results[layer_idx][h] for h in range(n_heads)}
             for layer_idx in results
